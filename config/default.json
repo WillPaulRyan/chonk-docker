@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://will:Morgan123@will-h7azy.mongodb.net/url_shortener?authSource=admin&replicaSet=Will-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true",
+  "baseUrl": "http://localhost:1337"
+}
