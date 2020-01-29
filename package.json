@@ -1,13 +1,14 @@
 {
-  "name": "url_shortener",
+  "name": "Chonk",
   "version": "1.0.0",
-  "description": "URL Shortening Service",
-  "main": "index.js",
+  "description": "URL shortening service",
+  "main": "chonk.js",
   "scripts": {
-    "start": "node index",
-    "dev": "nodemon index"
+    "start": "node chonk",
+    "dev": "nodemon chonk"
   },
   "keywords": [
+    "Chonk",
     "URL",
     "Shortener"
   ],
