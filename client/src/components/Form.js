@@ -37,7 +37,7 @@ export default class Form extends React.Component {
             required
           />
           <input type="image" id="button" 
-            src="/button.png" alt="Chonk!" />
+            src="./images/button.png" alt="Chonk!" />
         </form>
   
       </div>

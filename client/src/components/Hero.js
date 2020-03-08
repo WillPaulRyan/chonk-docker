@@ -8,7 +8,7 @@ export default class Hero extends React.Component {
     return (
       <div id="hero">
         <div id="hero-top">
-          <a className="logo" href="/#"><img className="logo" src="logo.png" alt="Chonk Logo" /></a>
+          <a className="logo" href="/#"><img className="logo" src="./imaages/logo.png" alt="Chonk Logo" /></a>
           <div id="blurb">
             <h1>URLs getting out of hand?</h1>
             <h2>With Chonk.tk, send urls you won't be ashamed of!</h2>
