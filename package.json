@@ -5,7 +5,9 @@
   "main": "chonk.js",
   "scripts": {
     "start": "node chonk",
-    "dev": "nodemon chonk"
+    "server": "nodemon chonk",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
     "Chonk",
@@ -22,6 +24,7 @@
     "valid-url": "^1.0.9"
   },
   "devDependencies": {
+    "concurrently": "^5.1.0",
     "nodemon": "^2.0.2"
   }
 }

@@ -3,6 +3,10 @@ const router = express.Router();
 
 const Url = require('../models/Url');
 
+// @route   GET /
+// @desc    Main view
+
+
 // @route   GET /:code
 // @desc    Redirect to long/original URL
 router.get('/:code', async (req, res) => {

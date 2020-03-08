@@ -1,0 +1,36 @@
+#hero-top {
+  height: 50vh;
+  padding: 1.5rem;
+  background-color: #DE9756;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.logo {
+  align-self: flex-start;
+  height: 2rem;
+  width: auto;
+}
+
+#blurb {
+  margin: auto;
+  color: rgb(0,0,0,.9)
+}
+
+#blurb h1 {
+  font-size: 3.5rem;
+  margin-bottom: .5rem;
+}
+
+#blurb h2 {
+  font-size: 2rem;
+}
+
+#hero-bottom {
+  height: 40vh;
+  background-color: #D4D88C;
+}
