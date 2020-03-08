@@ -1,5 +1,5 @@
 {
-  "name": "Chonk",
+  "name": "chonk",
   "version": "1.0.0",
   "description": "URL shortening service",
   "main": "chonk.js",
