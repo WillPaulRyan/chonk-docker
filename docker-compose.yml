@@ -2,7 +2,7 @@ version: '2'
 services:
   app:
     container_name: chonk-mongo
-    restart: on-failure
+    restart: always
     build: .
     ports:
       - '80:1337'
