@@ -5,14 +5,22 @@ const path = require("path");
 const app = express();
 
 // Connect to database
-async () => await mongoose
-  .connect(
-    'mongodb://mongo:27017/chonk-mongo',
-    { useNewUrlParser: true }
-  )
-  .then(() => console.log('MongoDB connected...'))
-  .then(err => console.error(err));
-
+async () => {
+  try {
+    await mongoose
+      .connect(
+        'mongodb://mongo:27017/chonk-mongo',
+        { 
+          useNewUrlParser: true,
+          useUnifiedTopology: true
+        })
+      .then(() => console.log('MongoDB connected...'))
+      .then(err => console.error(err.message));
+  } catch (err) {
+    console.error(err.message);
+    process.exit(1);
+  })
+  
 app.use(express.json({ extended: false }));
 
 app.use('/', require('./routes/index'));
