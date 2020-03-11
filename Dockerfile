@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-RUN cd /client && npm install && npm run build
+RUN cd client && npm install && npm run build
 
 EXPOSE 1337
 
