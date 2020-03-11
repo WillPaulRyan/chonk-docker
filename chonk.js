@@ -1,11 +1,17 @@
 const express = require('express');
-const connectDB = require('./config/db');
+const mongoose = require('mongoose');
 const path = require("path");
 
 const app = express();
 
 // Connect to database
-connectDB();
+mongoose
+  .connect(
+    'mongodb://mongo:27017/chonk-mongo',
+    { useNewUrlParser: true }
+  )
+  .then(() => console.log('MongoDB connected...'))
+  .then(err => console.error(err));
 
 app.use(express.json({ extended: false }));
 

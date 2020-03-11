@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const validUrl = require('valid-url');
 const shortid = require('shortid');
-const config = require('config');
 
 const Url = require('../models/Url');
 
@@ -10,12 +9,7 @@ const Url = require('../models/Url');
 // @desc    Create short URL
 router.post('/shorten', async (req, res) => {
   const { longUrl } = req.body;
-  const baseUrl = config.get('baseUrl');
-
-  // Check base url
-  if(!validUrl.isUri(baseUrl)) {
-    return res.status(400).json(`Invalid base url`);
-  }
+  const baseUrl = 'https://chonk.tk';
 
   // Create url code
   const urlCode = shortid.generate();
