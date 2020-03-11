@@ -18,8 +18,9 @@ async () => {
   } catch (err) {
     console.error(err.message);
     process.exit(1);
-  })
-  
+  }
+}
+
 app.use(express.json({ extended: false }));
 
 app.use('/', require('./routes/index'));
