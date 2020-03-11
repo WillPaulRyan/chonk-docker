@@ -5,7 +5,7 @@ const path = require("path");
 const app = express();
 
 // Connect to database
-mongoose
+async () => await mongoose
   .connect(
     'mongodb://mongo:27017/chonk-mongo',
     { useNewUrlParser: true }
