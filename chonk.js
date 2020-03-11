@@ -15,7 +15,6 @@ async () => {
           useUnifiedTopology: true
         })
       .then(() => console.log('MongoDB connected...'))
-      .then(err => console.error(err.message));
   } catch (err) {
     console.error(err.message);
     process.exit(1);
