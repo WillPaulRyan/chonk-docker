@@ -1,7 +1,7 @@
 version: '2'
 services:
   app:
-    container_name: chonk-mongo
+    container_name: chonk
     restart: always
     build: .
     ports:

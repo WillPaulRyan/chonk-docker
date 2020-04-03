@@ -21,7 +21,7 @@ export default class Form extends React.Component {
       .then(data => {
         this.setState({url: data.shortUrl})
       })
-      .catch(err => console.log(err));
+      .catch(err => console.error(err));
   }
 
   render() {

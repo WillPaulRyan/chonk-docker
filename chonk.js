@@ -4,22 +4,28 @@ const path = require("path");
 
 const app = express();
 
+// // Connect to database for local testing
+// mongoose
+//   .connect(
+//     'mongodb://localhost:27017/chonk',
+//     {
+//       useNewUrlParser: true,
+//       useUnifiedTopology: true
+//     })
+//   .then(() => console.log('MongoDB connected...'))
+//   .catch(err => console.error(err))
+
 // Connect to database
-async () => {
-  try {
-    await mongoose
-      .connect(
-        'mongodb://mongo:27017/chonk-mongo',
-        { 
-          useNewUrlParser: true,
-          useUnifiedTopology: true
-        })
-      .then(() => console.log('MongoDB connected...'))
-  } catch (err) {
-    console.error(err.message);
-    process.exit(1);
-  }
-}
+mongoose
+  .connect(
+    'mongodb://mongo:27017/chonk',
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    })
+  .then(() => console.log('MongoDB connected...'))
+  .catch(err => console.error(err))
+
 
 app.use(express.json({ extended: false }));
 
@@ -34,4 +40,4 @@ app.get('*', (req, res) => {
 
 const PORT = process.env.PORT || 1337;
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}...`));
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}...`));
